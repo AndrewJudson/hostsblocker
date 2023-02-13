@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Hosts blocker",
+    "version": "1.0",
+    "description": "Block distracting domains in hosts file",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_ui": {
+        "page": "options.html"
+      }
+  }
